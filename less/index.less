@@ -57,3 +57,196 @@ html, body {
 	height: 100%;
 }
 
+html {
+	font-size: 62.5%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+// Variables
+
+@header-font: 'Noto Sans', sans-serif;
+@header-color: navy;
+@secondary-color: gray;
+@text-font: sans-serif;
+@content-padding: 10px 5%;
+@layout-border: 0.3rem solid @header-color;
+
+// ---------------------------------- //
+
+// Mixins
+
+.flex(@wrap, @justify) {
+	display: flex;
+	flex-wrap: @wrap;
+	justify-content: @justify;
+}
+
+.section-titles() {
+	font-size: 2rem;
+	font-family: @header-font;
+	line-height: 6rem;
+}
+
+.text() {
+	font-family: sans-serif;
+	font-size: 1.6rem;
+	font-weight: lighter;
+	line-height: 2rem;
+}
+
+// ---------------------------------- //
+
+.container {
+	margin: auto;
+	max-width: 800px;
+	width: 90%;
+
+	@media (max-width: 500px) {
+		width: 95%;
+	}
+
+	.header {
+		.flex(wrap, space-between);
+		border: @layout-border;
+		margin: 10px 0 20px;
+
+		h1 {
+			color: @header-color;
+			font-family: @header-font;
+			font-size: 2.8rem;
+			margin-top: 30px;
+			text-align: center;
+			width: 100%;
+
+			@media (max-width: 500px) {
+				font-size: 2rem;
+			}
+
+		}
+
+		
+
+		nav {
+			.flex(nowrap, space-around);
+			margin: 30px 0 20px;
+			width: 100%;
+
+			a {
+				color: @secondary-color;
+				font-size: 1.6rem;
+				font-family: @text-font;
+				text-decoration: none;
+
+				@media (max-width: 500px) {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+
+
+	.main {
+		border: @layout-border;
+		padding: @content-padding;
+
+		section {
+			> h1 {
+				.section-titles();
+				color: @header-color;
+
+				@media (max-width: 500px) {
+					font-size: 1.6rem;
+					line-height: 3rem;
+				}
+			}
+
+			ul {
+				.flex(wrap, space-evenly);
+			}
+
+			li, p {
+				.text();
+			}
+
+			li {
+				width: 33%;
+
+				@media (max-width: 500px) {
+					font-size: 1.2rem;
+				}
+			}
+
+			p {
+				margin: 10px 0;
+
+				@media (max-width: 500px) {
+					font-size: 1.4rem;
+				}
+			}
+
+			a {
+				color: black;
+				text-decoration: none;
+			}
+
+			a > h1,
+			article > h1 {
+				font-family: @text-font;
+				font-size: 1.5rem;
+				// line-height: 3rem;
+			}
+
+			a > h2,
+			article > h2 {
+				color: @secondary-color;
+				font-family: @text-font;
+				font-size: 1.4rem;
+				font-weight: lighter;
+				// line-height: 3rem;
+			}
+		}
+	}
+
+
+
+	form {
+		border: @layout-border;
+		color: @header-color;
+		margin: 20px 0 10px;
+		padding: @content-padding;
+
+		h1 {
+			.section-titles();
+			width: 100%;
+		}
+
+		input,
+		textarea {
+			.text();
+			margin-bottom: 20px;
+			min-width: 200px;
+			padding: 2px 0.5%;
+			width: 35%;
+
+			@media (max-width: 500px) {
+				font-size: 1.4rem;
+			}
+		}
+
+		textarea {
+			height: 100px;
+			min-width: 250px;
+			width: 50%;
+		}
+
+		.submit {
+			.text();
+			width: inherit;
+
+			@media (max-width: 500px) {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
