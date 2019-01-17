@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -14,6 +15,100 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+    <header class="header">
+      <h1>Shaun Carmody</h1>
+      <nav>
+        <a href="#technical-skills">Technical Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#work-history">Work History</a>
+        <a href="#education">Education</a>
+        <a href="https://c87.github.io/" target="_blank">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="introduction">
+        <h1>Introduction</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolore obcaecati voluptatum delectus
+          dicta in natus numquam? Unde quasi tempore nostrum impedit repudiandae rem corporis atque? Nam soluta
+          cupiditate eius.</p>
+      </section>
+      <section id="technical-skills">
+        <h1>Technical Skills</h1>
+        <ul>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Redux</li>
+          <li>Express</li>
+          <li>Node</li>
+          <li>OAuth</li>
+          <li>LESS</li>
+          <li>HTML</li>
+          <li>Git</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h1>Projects</h1>
+        <article>
+          <h1>Advanced CSS Sprint Challenge</h1>
+          <p>This challenge allows you to practice the concepts and techniques learned over the past week and apply
+            them in a concrete project. This Sprint explored advanced CSS techniques using Responsive Design and
+            Preprocessing. During this Sprint, you studied how to use the viewport meta tag, media queries, setting up
+            a preprocessor, and advanced use of preprocessing techniques. In your challenge this week, you will
+            demonstrate proficiency by updating a website that is missing content as well as adding mobile styling.</p>
+        </article>
+        <article>
+          <a href="https://github.com/C87/Sprint-Challenge--User-Interface" target="_blank">
+            <h1>User Interface I Sprint Challenge</h1>
+            <p>This challenge allows you to practice the concepts and techniques learned over the past week and apply
+              them in a concrete project. This Sprint explored User Interface and Git. During this Sprint, you studied
+              Semantic HTML, CSS Fundamentals, CSS Flexbox Module, and Git. In your challenge this week, you will
+              demonstrate proficiency by creating a multi page website that has some missing HTML elements as well as
+              CSS specificity problems that need to be solved. You will also create an additional web page that will be
+              linked to from a navigation you will build.</p>
+          </a>
+        </article>
+      </section>
+      <section id="work-history">
+        <h1>Work History</h1>
+        <article>
+          <h1>BetVictor</h1>
+          <h2>2011 to present</h2>
+          <p>Betvictor, is an independent bookmaker based in Gibraltar. Having initially specialised in online sports
+            betting, the company now incorporates online casino also.</p>
+        </article>
+      </section>
+      <section id="education">
+        <h1>Education</h1>
+        <article>
+          <h1>Lambda School</h1>
+          <h2>Full-Stack Web & Computer Science 2019</h2>
+          <p>Lambda School is a 30 week, immersive program that gives you the tools and training you need to launch
+            your new career—from the comfort of your own home.</p>
+        </article>
+        <article>
+          <h1>Manchester Metropolitan University</h1>
+          <h2>Business Economics 2011</h2>
+          <p>Learn how organisations work in the real world. Explore what they do, how they compete, and why they
+            succeed. Studying business, you’ll develop practical skills and a strategic mindset.</p>
+
+          <p>With our combined degree you can do even more. With economics in the mix, you’ll look at how organisations
+            allocate resources and make decisions. And you’ll discover how that impacts big topics like employment, the
+            distribution of wealth, productivity and growth, government spending and international trade.</p>
+        </article>
+      </section>
+    </main>
+    <form id="contact">
+      <h1>Contact</h1>
+      <input type="text" name="name" placeholder="Name"><br>
+      <input type="email" name="email" placeholder="Email"><br>
+      <input type="number" name="phone" placeholder="Phone Number"><br>
+      <textarea name="message" placeholder="Message"></textarea><br>
+      <input class="submit" type="submit" value="Send Message">
+    </form>
+  </div>
+
 </body>
+
 </html>

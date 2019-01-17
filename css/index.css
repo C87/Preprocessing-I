@@ -1,1 +1,302 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v7/o-0IIpQlx3QUlC5A4PNr5TRF.ttf) format('truetype');
+}
+.container {
+  margin: auto;
+  max-width: 800px;
+  width: 90%;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
+}
+.container .header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 0.3rem solid navy;
+  margin: 10px 0 20px;
+}
+.container .header h1 {
+  color: navy;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2.8rem;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .container .header h1 {
+    font-size: 2rem;
+  }
+}
+.container .header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 30px 0 20px;
+  width: 100%;
+}
+.container .header nav a {
+  color: gray;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .container .header nav a {
+    font-size: 1.2rem;
+  }
+}
+.container .main {
+  border: 0.3rem solid navy;
+  padding: 10px 5%;
+}
+.container .main section > h1 {
+  font-size: 2rem;
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 6rem;
+  color: navy;
+}
+@media (max-width: 500px) {
+  .container .main section > h1 {
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+}
+.container .main section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container .main section li,
+.container .main section p {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  line-height: 2rem;
+}
+.container .main section li {
+  width: 33%;
+}
+@media (max-width: 500px) {
+  .container .main section li {
+    font-size: 1.2rem;
+  }
+}
+.container .main section p {
+  margin: 10px 0;
+}
+@media (max-width: 500px) {
+  .container .main section p {
+    font-size: 1.4rem;
+  }
+}
+.container .main section a {
+  color: black;
+  text-decoration: none;
+}
+.container .main section a:hover {
+  background-color: black;
+}
+.container .main section a > h1,
+.container .main section article > h1 {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+.container .main section a > h2,
+.container .main section article > h2 {
+  color: gray;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  font-weight: lighter;
+}
+.container form {
+  border: 0.3rem solid navy;
+  color: navy;
+  margin: 20px 0 10px;
+  padding: 10px 5%;
+}
+.container form h1 {
+  font-size: 2rem;
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 6rem;
+  width: 100%;
+}
+.container form input,
+.container form textarea {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  line-height: 2rem;
+  margin-bottom: 20px;
+  min-width: 200px;
+  padding: 2px 0.5%;
+  width: 35%;
+}
+@media (max-width: 500px) {
+  .container form input,
+  .container form textarea {
+    font-size: 1.4rem;
+  }
+}
+.container form textarea {
+  height: 100px;
+  min-width: 250px;
+  width: 50%;
+}
+.container form .submit {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  line-height: 2rem;
+  width: inherit;
+}
+@media (max-width: 500px) {
+  .container form .submit {
+    font-size: 1.4rem;
+  }
+}
